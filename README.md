@@ -26,7 +26,7 @@ Then zip the above files that are created into a "puzzledp.zip" file.<br />
 (Create zero length files for any missing roms that are not required inside the "puzzledp.zip" file.)<br />
 <br />
 Howto Run:<br />
-You can also use NEO-GEO emulators like MAME NEO-GEO Driver to run the "puzzledp.zip" file:<br />
+You can use NEO-GEO emulators like the MAME NEO-GEO Driver to run the "puzzledp.zip" file:<br />
 Place the "puzzledp.zip" file in the "MAME/roms" directory.<br />
 Place the "neogeo.zip" bios file in the "MAME/roms" directory.<br />
 Using MAME Run: mame puzzledp
