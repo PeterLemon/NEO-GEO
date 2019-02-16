@@ -1,4 +1,3 @@
-// NEO-GEO 3D-Line Sprite demo by krom (Peter Lemon):
 // Sound Driver Version 3.0 by MAKOTO
 arch ng.apu
 output "202-m1.m1", create
