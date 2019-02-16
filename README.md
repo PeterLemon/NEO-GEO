@@ -6,7 +6,10 @@ NEO-GEO Bare Metal Code by krom (Peter Lemon).<br />
 All code compiles out of box with the bass assembler by byuu.<br />
 I use a special version of bass by ARM9 which has been updated with NEO-GEO M68K/Z80 output:<br />
 https://github.com/ARM9/bass<br />
-I have included binaries of all the demos, including "puzzledp.zip" packed rom for MAME.<br />
+<br />
+I also use a tool called ROMWak, which is needed to byteswap the main M68K program ROM:<br />
+https://github.com/freem/romwak/<br />
+I have included binaries of all the demos, including "puzzledp.zip" packed ROM for MAME.<br />
 <br />
 Special thanks to freem, who has helped me get into NEO-GEO Coding =D<br />
 Check out his website here: http://www.ajworld.net/neogeodev/<br />
