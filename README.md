@@ -10,7 +10,6 @@ I have included binaries of all the demos, including "puzzledp.zip" packed rom f
 <br />
 Special thanks to freem, who has helped me get into NEO-GEO Coding =D<br />
 Check out his website here: http://www.ajworld.net/neogeodev/<br />
-<br />
 Also check out the wiki by neogeodev.org here: https://wiki.neogeodev.org/<br />
 <br />
 Please check out MAME, an accurate NEO-GEO emulator:<br />
