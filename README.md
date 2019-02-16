@@ -23,7 +23,7 @@ All the code compiles into multiple binary (202-XX.XX) files:<br />
 <br />
 Using bass Run: make.bat<br />
 Then zip the above files that are created into a "puzzledp.zip" file.<br />
-(Create zero length files for any missing roms that are not required inside the "puzzledp.zip".) 
+(Create zero length files for any missing roms that are not required inside the "puzzledp.zip".)<br />
 <br />
 Howto Run:<br />
 You can also use NEO-GEO emulators like MAME NEO-GEO Driver to run the "puzzledp.zip" file:<br />
