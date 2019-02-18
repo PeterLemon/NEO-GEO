@@ -18,9 +18,6 @@ seek($00000000) // Entry Point Of Code
 include "LIB\NEO-GEO.INC" // Include NEO-GEO Definitions
 include "LIB\NEO-GEO_HEADER.ASM" // Include Header & Vector Table
 
-// WRAM Variables
-constant VertBlank($100000) // Vertical Blank Memory Byte
-
 VBlankIRQ: // Interrupt 1: Vertical Blank (Interrupt Triggered At Vertical Blank Start)
   // Display NEO-GEO Logo In System Mode, Otherwise Run Game Mode
   btst.b  #7,SYSTEM_MODE // Test Bit 7 In SYSTEM_MODE Byte ($10FD80) (0 = System Mode, 1 = Game Mode)
@@ -29,7 +26,6 @@ VBlankIRQ: // Interrupt 1: Vertical Blank (Interrupt Triggered At Vertical Blank
   GameMode:
     move.w  #4,LSPC_INTR_REG // Clear Vertical Blank Interrupt Bit 2 Of LSPC Interrupt ($3C000C)
     move.b  d0,WDOG_TMR_REG  // Set Interrupt Watchdog Timer ($300001)
-    move.b  #1,VertBlank     // Store 1 To Vertical Blank Memory Byte
   rte // Return From Exception
 
 TimerIRQ: // Interrupt 2: Timer (Interrupt Triggered When Timer Counter Reaches 0)
