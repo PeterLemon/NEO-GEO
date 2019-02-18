@@ -27,14 +27,12 @@ VBlankIRQ: // Interrupt 1: Vertical Blank (Interrupt Triggered At Vertical Blank
   GameMode:
     move.w  #4,LSPC_INTR_REG // Clear Vertical Blank Interrupt Bit 2 Of LSPC Interrupt ($3C000C)
     move.b  d0,WDOG_TMR_REG  // Set Interrupt Watchdog Timer ($300001)
-
     lea.l   BGPalette,a6 // A6 = BG Palette Source Address
   rte // Return From Exception
 
 TimerIRQ: // Interrupt 2: Timer (Interrupt Triggered When Timer Counter Reaches 0)
   move.w  #2,LSPC_INTR_REG // Clear Timer Interrupt Bit 1 Of LSPC Interrupt ($3C000C)
   move.b  d0,WDOG_TMR_REG  // Set Interrupt Watchdog Timer ($300001)
-
   move.w  (a6)+,(a5) // Copy 1 BG Palette Color (2 Bytes)
   rte // Return From Exception
 
