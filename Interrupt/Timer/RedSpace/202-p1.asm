@@ -4,6 +4,7 @@
 // 3. Initialize Line Sprites Using System Subroutine
 // 4. Load Palette Data To Palette RAM
 // 5. Print Text Characters To VRAM Fix Area Using S1 ROM 8x8 Font
+// 6. Set Interrupt Timer To Trigger Every 8 Scanlines To Load BG Palette Color
 arch ng.cpu
 endian msb
 output "202-p1.p1", create
@@ -69,7 +70,7 @@ Start:
   lea.l   BGPalette,a6 // A6 = BG Palette Source Address
   lea.l   COL_PAL_REG+255*32+30,a5 // A5 = BG Palette Destination Address ($401FFE)
 
-  move.w  #(384*8)-1,d0 // D0 = 7 Scanlines Time - 1 (LSB)
+  move.w  #(384*8)-1,d0 // D0 = 8 Scanlines Time - 1 (LSB)
   move.w  d0,LSPC_TMLO_REG // Store Time To LSPC Timer Low Register ($3C000A)
   move.w  #%11010000,d0 // D0 = Mode Flags
   move.w  d0,LSPC_MODE_REG // Store Mode Flags To LSPC Mode Register ($3C0006)
