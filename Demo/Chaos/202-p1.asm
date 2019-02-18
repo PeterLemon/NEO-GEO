@@ -31,6 +31,7 @@ VBlankIRQ: // Interrupt 1: Vertical Blank (Interrupt Triggered At Vertical Blank
 
 TimerIRQ: // Interrupt 2: Timer (Interrupt Triggered When Timer Counter Reaches 0)
   move.w  #2,LSPC_INTR_REG // Clear Timer Interrupt Bit 1 Of LSPC Interrupt ($3C000C)
+  move.b  d0,WDOG_TMR_REG  // Set Interrupt Watchdog Timer ($300001)
   rte // Return From Exception
 
 Start:
