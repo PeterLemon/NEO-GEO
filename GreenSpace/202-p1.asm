@@ -15,8 +15,8 @@ macro seek(variable offset) {
 }
 
 seek($00000000) // Entry Point Of Code
-include "LIB\NEO-GEO.INC" // Include NEO-GEO Definitions
-include "LIB\NEO-GEO_HEADER.ASM" // Include Header & Vector Table
+include "LIB/NEO-GEO.INC" // Include NEO-GEO Definitions
+include "LIB/NEO-GEO_HEADER.ASM" // Include Header & Vector Table
 
 VBlankIRQ: // Interrupt 1: Vertical Blank (Interrupt Triggered At Vertical Blank Start)
   // Display NEO-GEO Logo In System Mode, Otherwise Run Game Mode
